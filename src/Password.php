@@ -90,12 +90,12 @@
 
                     if
                     (
-                        !empty($password) &&                            // NOT EMPTY
-                        strlen($password) >= 8 &&                       // AT LEAST EIGHT CHARACTERS
+                        !empty($password) &&                     // NOT EMPTY
+                        strlen($password) >= 8 &&                // AT LEAST EIGHT CHARACTERS
                         preg_match('(\p{Lu})u', $password) &&    // CONTAINS ONE UPPERCASE CHAR
                         preg_match('(\p{Ll})u', $password) &&    // CONTAINS ONE LOWERCASE CHAR
                         preg_match('(\p{N})u', $password) &&     // CONTAINS ONE NUMBER
-                        (                                               // CONTAINS ONE SYMBOL
+                        (                                        // CONTAINS ONE SYMBOL
                             preg_match('(\p{S})u', $password) ||
                             preg_match('(\p{P})u', $password)
                         )
