@@ -45,8 +45,8 @@
                 // SET VALID ALGORITHMS ARRAY
 
                     $validAlgorithms = [PASSWORD_DEFAULT, PASSWORD_BCRYPT];
-                    if (defined('PASSWORD_ARGON2I')) {$validAlgorithms = PASSWORD_ARGON2I;}
-                    if (defined('PASSWORD_ARGON2ID')) {$validAlgorithms = PASSWORD_ARGON2ID;}
+                    if (defined('PASSWORD_ARGON2I')) {$validAlgorithms[] = PASSWORD_ARGON2I;}
+                    if (defined('PASSWORD_ARGON2ID')) {$validAlgorithms[] = PASSWORD_ARGON2ID;}
 
                 // THROW EXCEPTIONS FOR INVALID DATA | RETURN HASHED PASSWORD
 
